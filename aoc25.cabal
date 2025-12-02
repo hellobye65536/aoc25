@@ -1,0 +1,23 @@
+cabal-version:      2.4
+name:               aoc23
+version:            0.0.0.0
+
+synopsis:           Advent of Code 2025
+description:        Advent of Code 2025
+
+license:            MIT
+license-file:       LICENSE
+author:             hellobye65536
+maintainer:         boshwang1234@gmail.com
+
+common common
+    hs-source-dirs:   src
+    default-language: GHC2024
+    build-depends:    base ^>= 4.21
+    ghc-options:
+        -Wall
+        -Wno-name-shadowing
+
+executable p1a
+    import:           common
+    main-is:          P1a.hs
