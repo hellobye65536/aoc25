@@ -21,3 +21,7 @@ common common
 executable p1a
     import:           common
     main-is:          P1a.hs
+
+executable p1b
+    import:           common
+    main-is:          P1b.hs
