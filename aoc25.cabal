@@ -37,3 +37,15 @@ executable p2b
     main-is:          P2b.hs
     build-depends:
         text ^>= 2.1,
+
+executable p3a
+    import:           common
+    main-is:          P3a.hs
+    build-depends:
+        text ^>= 2.1,
+
+executable p3b
+    import:           common
+    main-is:          P3b.hs
+    build-depends:
+        text ^>= 2.1,

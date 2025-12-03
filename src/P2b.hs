@@ -4,7 +4,7 @@ module Main (main) where
 
 import Control.Monad (replicateM)
 import Data.Either (fromRight)
-import Data.List (nub, sort)
+import Data.List (sort)
 import Data.List.NonEmpty qualified as NE
 import Data.Text qualified as T
 import Data.Text.IO qualified as T
