@@ -25,3 +25,15 @@ executable p1a
 executable p1b
     import:           common
     main-is:          P1b.hs
+
+executable p2a
+    import:           common
+    main-is:          P2a.hs
+    build-depends:
+        text ^>= 2.1,
+
+executable p2b
+    import:           common
+    main-is:          P2b.hs
+    build-depends:
+        text ^>= 2.1,
