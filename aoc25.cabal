@@ -49,3 +49,17 @@ executable p3b
     main-is:          P3b.hs
     build-depends:
         text ^>= 2.1,
+
+executable p4a
+    import:           common
+    main-is:          P4a.hs
+    build-depends:
+        text ^>= 2.1,
+        array ^>= 0.5,
+
+executable p4b
+    import:           common
+    main-is:          P4b.hs
+    build-depends:
+        text ^>= 2.1,
+        array ^>= 0.5,
