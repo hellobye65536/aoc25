@@ -63,3 +63,15 @@ executable p4b
     build-depends:
         text ^>= 2.1,
         array ^>= 0.5,
+
+executable p5a
+    import:           common
+    main-is:          P5a.hs
+    build-depends:
+        text ^>= 2.1,
+
+executable p5b
+    import:           common
+    main-is:          P5b.hs
+    build-depends:
+        text ^>= 2.1,
