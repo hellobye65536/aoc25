@@ -75,3 +75,16 @@ executable p5b
     main-is:          P5b.hs
     build-depends:
         text ^>= 2.1,
+
+executable p6a
+    import:           common
+    main-is:          P6a.hs
+    build-depends:
+        text ^>= 2.1,
+
+executable p6b
+    import:           common
+    main-is:          P6b.hs
+    build-depends:
+        text ^>= 2.1,
+        split ^>= 0.2,
