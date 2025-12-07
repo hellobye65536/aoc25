@@ -31,7 +31,9 @@ main =
       . sum
       . map
         ( uncurry (&)
-            . bimap (map (parseDecimal . T.strip) . T.transpose) (parseOp . T.head . T.strip)
+            . bimap
+              (map (parseDecimal . T.strip) . T.transpose)
+              (parseOp . T.head . T.strip)
             . fromMaybe invalid
             . unsnoc
             . map T.pack
