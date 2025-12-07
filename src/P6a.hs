@@ -4,6 +4,7 @@ module Main (main) where
 
 import Data.Bifunctor (bimap)
 import Data.Either (fromRight)
+import Data.Function ((&))
 import Data.List (transpose, unsnoc)
 import Data.Maybe (fromMaybe)
 import Data.Text qualified as T
@@ -27,9 +28,12 @@ main =
     (<> "\n")
       . T.show
       . sum
-      . (\(xss, ops) -> zipWith ($) ops (transpose xss))
-      . bimap (map (map parseDecimal . T.words)) (map (parseOp . T.head) . T.words)
+      . uncurry (zipWith (&))
+      . bimap
+        (transpose . map (map parseDecimal))
+        (map (parseOp . T.head))
       . fromMaybe invalid
       . unsnoc
+      . map T.words
       . T.lines
       . T.strip
