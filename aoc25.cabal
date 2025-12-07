@@ -88,3 +88,17 @@ executable p6b
     build-depends:
         text ^>= 2.1,
         split ^>= 0.2,
+
+executable p7a
+    import:           common
+    main-is:          P7a.hs
+    build-depends:
+        text ^>= 2.1,
+        vector ^>= 0.13,
+
+executable p7b
+    import:           common
+    main-is:          P7b.hs
+    build-depends:
+        text ^>= 2.1,
+        vector ^>= 0.13,
