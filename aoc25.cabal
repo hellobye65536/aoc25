@@ -102,3 +102,17 @@ executable p7b
     build-depends:
         text ^>= 2.1,
         vector ^>= 0.13,
+
+executable p8a
+    import:           common
+    main-is:          P8a.hs
+    build-depends:
+        text ^>= 2.1,
+        vector ^>= 0.13,
+
+executable p8b
+    import:           common
+    main-is:          P8b.hs
+    build-depends:
+        text ^>= 2.1,
+        vector ^>= 0.13,
