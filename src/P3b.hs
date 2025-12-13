@@ -11,7 +11,7 @@ maxCount :: Int
 maxCount = 12
 
 solve :: String -> Maybe Int
-solve xs = go xs !! (maxCount - 1)
+solve xs_ = go xs_ !! (maxCount - 1)
  where
   go :: String -> [Maybe Int]
   go [] = replicate maxCount Nothing

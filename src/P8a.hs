@@ -66,9 +66,9 @@ solve' vecs_ = V.unzip $ V.create $ do
           VM.modify size (+ sy) x''
           pure True
     go [] _ = invalid
-    go ((u, v) : edges) left = when (left > (0 :: Int)) $ do
+    go ((u, v) : edges') left = when (left > (0 :: Int)) $ do
       _ <- union u v
-      go edges (left - 1)
+      go edges' (left - 1)
     edges =
       sortOn
         (uncurry dist . join bimap (vecs V.!))

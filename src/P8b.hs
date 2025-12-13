@@ -66,14 +66,14 @@ solve vecs_ = runST $ do
           VM.modify size (+ sy) x''
           pure True
     go [] ret = pure ret
-    go ((u, v) : edges) ret = do
+    go ((u, v) : edges') ret = do
       unioned <- union u v
       if unioned
         then
           let (ux, _, _) = vecs V.! u
               (vx, _, _) = vecs V.! v
-           in go edges (ux * vx)
-        else go edges ret
+           in go edges' (ux * vx)
+        else go edges' ret
     edges =
       sortOn
         (uncurry dist . join bimap (vecs V.!))

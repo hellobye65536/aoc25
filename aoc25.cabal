@@ -16,7 +16,6 @@ common common
     build-depends:    base ^>= 4.21
     ghc-options:
         -Wall
-        -Wno-name-shadowing
 
 executable p1a
     import:           common
