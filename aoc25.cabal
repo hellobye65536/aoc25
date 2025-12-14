@@ -115,3 +115,18 @@ executable p8b
     build-depends:
         text ^>= 2.1,
         vector ^>= 0.13,
+
+executable p9a
+    import:           common
+    main-is:          P9a.hs
+    build-depends:
+        text ^>= 2.1,
+
+executable p9b
+    import:           common
+    main-is:          P9b.hs
+    build-depends:
+        text ^>= 2.1,
+        array ^>= 0.5,
+        vector ^>= 0.13,
+        vector-algorithms ^>= 0.9,
