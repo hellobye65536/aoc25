@@ -28,15 +28,14 @@ parse tx = (buttons, lights)
 
 solve :: ([[Int]], V.Vector Bool) -> Int
 solve (buttons, lights) = minimum $ do
-  let len = V.length lights
   pressed <- filterM (const [False, True]) buttons
-  let resultLights =
+  let lights' =
         V.accum
           (const . not)
-          (V.replicate len False)
+          lights
           $ map (,())
           $ concat pressed
-  guard $ lights == resultLights
+  guard $ V.all not lights'
   pure $ length pressed
 
 main :: IO ()

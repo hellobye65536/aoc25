@@ -49,7 +49,8 @@ solve :: ([[Int]], V.Vector Int) -> Maybe Int
 solve (buttons, counters_) = runST $ do
   memo <- HT.new
   let go counters | V.all (== 0) counters = pure $ Just 0
-      go counters =
+      go counters = do
+        let memoKey = V.toList counters
         HT.lookup memo memoKey >>= \case
           Just res -> pure res
           Nothing -> do
@@ -57,7 +58,6 @@ solve (buttons, counters_) = runST $ do
             HT.insert memo memoKey computed
             pure computed
        where
-        memoKey = V.toList counters
         computed_ = fmap (fmap getMin . foldMap (fmap Min)) $ sequenceA $ do
           pressed <- backtrackPressed (buttons, counters)
 
@@ -65,7 +65,9 @@ solve (buttons, counters_) = runST $ do
           guard $ V.all even counters'
 
           let halvedCounters = V.map (`quot` 2) counters'
-          pure $ fmap (\nextPressed -> length pressed + 2 * nextPressed) <$> go halvedCounters
+          pure $
+            fmap (\nextCost -> length pressed + 2 * nextCost)
+              <$> go halvedCounters
   go counters_
 
 main :: IO ()
