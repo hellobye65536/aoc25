@@ -144,3 +144,17 @@ executable p10b
         text ^>= 2.1,
         vector ^>= 0.13,
         hashtables ^>= 1.4,
+
+executable p11a
+    import:           common
+    main-is:          P11a.hs
+    build-depends:
+        text ^>= 2.1,
+        unordered-containers ^>= 0.2,
+
+executable p11b
+    import:           common
+    main-is:          P11b.hs
+    build-depends:
+        text ^>= 2.1,
+        unordered-containers ^>= 0.2,
