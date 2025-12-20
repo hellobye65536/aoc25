@@ -129,4 +129,18 @@ executable p9b
         text ^>= 2.1,
         array ^>= 0.5,
         vector ^>= 0.13,
-        vector-algorithms ^>= 0.9,
+
+executable p10a
+    import:           common
+    main-is:          P10a.hs
+    build-depends:
+        text ^>= 2.1,
+        vector ^>= 0.13,
+
+executable p10b
+    import:           common
+    main-is:          P10b.hs
+    build-depends:
+        text ^>= 2.1,
+        vector ^>= 0.13,
+        hashtables ^>= 1.4,
