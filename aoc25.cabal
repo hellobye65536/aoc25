@@ -158,3 +158,10 @@ executable p11b
     build-depends:
         text ^>= 2.1,
         unordered-containers ^>= 0.2,
+
+executable p12
+    import:           common
+    main-is:          P12.hs
+    build-depends:
+        text ^>= 2.1,
+        split ^>= 0.2,
