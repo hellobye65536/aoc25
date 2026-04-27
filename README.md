@@ -54,7 +54,7 @@ Buttons need only be clicked at most once, so it suffices to brute force every p
 This is a kind of [integer linear programming](https://en.wikipedia.org/wiki/Integer_programming).
 It's possible to solve this using a linear algebra based solution.
 
-The solution in this repository is a aort of "halving parity-checking" solution.
+The solution in this repository is a sort of "halving parity-checking" solution.
 Check all button press combinations, where each button is pressed at most once, and ensure the leftover required joltages are all even.
 Then, divide the required joltages by two and recurse.
 
